@@ -7,6 +7,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MediumTopAppBar
 import androidx.compose.material3.Text
@@ -25,7 +26,7 @@ import com.emse.smartplant.ui.theme.SmartPlantTheme
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
-fun SmartPlantTopAppBar(title: String? = null, returnAction: () -> Unit = {}) {
+fun SmartPlantTopAppBar(title: String? = null, returnAction: () -> Unit = {},   currentPage: String = "",onNavigateToPage: (String) -> Unit = {}) {
     val colors = TopAppBarDefaults.topAppBarColors(
         containerColor = MaterialTheme.colorScheme.primaryContainer,
         titleContentColor = MaterialTheme.colorScheme.primary,
@@ -41,9 +42,12 @@ fun SmartPlantTopAppBar(title: String? = null, returnAction: () -> Unit = {}) {
     // Define the actions displayed on the right side of the app bar
     val actions: @Composable RowScope.() -> Unit = {
         IconButton(onClick =  { context.startActivity(intentList)}) {
+            val isCurrentPage = currentPage == "PlantList"
+
             Icon(
                 painter = painterResource(R.drawable.ic_list),
-                contentDescription = stringResource(R.string.app_go_plantlist)
+                contentDescription = stringResource(R.string.app_go_plantlist) ,
+                tint = if (isCurrentPage) MaterialTheme.colorScheme.secondary else LocalContentColor.current
             )
         }
         IconButton(onClick =  { context.startActivity(intentMain)}) {

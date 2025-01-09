@@ -11,3 +11,13 @@ data class PlantDto(
     val max_humidity: Double
 
 )
+
+data class PlantCommand(
+    val name: String,
+    val plantType: String
+)
+
+class PlantList(
+    val rooms: List<PlantDto> = emptyList(),
+    val error: String? = null
+)
