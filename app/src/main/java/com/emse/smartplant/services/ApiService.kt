@@ -17,7 +17,7 @@ object ApiServices {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
             .client(client)
-            .baseUrl("https://app-3861dd22-bcbc-49fb-a17d-9e71a5501d1b.cleverapps.io/")
+            .baseUrl("https://smartplant.cleverapps.io/api")
             .build()
             .create(PlantApiService::class.java)
     }

@@ -18,3 +18,8 @@ indications on what he has to do to take care of them.
 ### Menu
 
 The menu is a top bar allowing the user to navigate through the app.
+
+The ideal was to be able to create a plant. Our efforts to implement the API lead to failure.
+For this reason, there is the version with the API while the version that is working (without it, which 
+will still give you an idea of what I had in mind) is in another GitHub repository that is at your
+disposal.

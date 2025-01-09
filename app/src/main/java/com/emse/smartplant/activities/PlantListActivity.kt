@@ -152,7 +152,7 @@ fun PlantItem(plant: PlantDto, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun PlantItemPreview() {
-    SmartPlantTheme {
+    SmartPlantTheme() {
         PlantItem(PlantService.PLANTS[0])
     }
 }
