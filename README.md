@@ -3,6 +3,8 @@
 ## This is the non functionnal version of the App with our best tries to implement the backend API. This is there to show you our efforts in trying to implement a failing backend
 ## we did not manage to handle the null values for the current_temperature due to the structure of the Backend and had too little time to correct it to a sufficient extent.
 
+Here is the link to the GitHub repository to
+
 ## The App's features :
 
 ### Homepage
